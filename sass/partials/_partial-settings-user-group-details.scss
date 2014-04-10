@@ -1,0 +1,26 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+
+#settings-user-group-details-content-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+}
+
+#settings-user-group-permission-list-container {
+  width: 100%;
+  height: 100%;
+
+  max-width: rem-calc(450px);
+}
+
+.settings-user-group-permission-list-item {
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: rem-calc(15px);
+}

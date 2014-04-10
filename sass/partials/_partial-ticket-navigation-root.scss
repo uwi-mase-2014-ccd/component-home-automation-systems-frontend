@@ -1,0 +1,63 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+
+$ticket-navigation-options-width: rem-calc(260px);
+
+#ticket-navigation-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+}
+
+#ticket-navigation-options {
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $dark-bg-color;
+
+  padding-left: rem-calc(15px);
+  padding-top: rem-calc(5px);
+  padding-bottom: rem-calc(5px);
+}
+
+#ticket-navigation-options-inner {
+  width: 100%;
+  height: 100%;
+
+  max-width: $ticket-navigation-options-width - (rem-calc(10px) + rem-calc(15px)) ;
+
+  overflow: auto;
+
+}
+
+#ticket-navigation-ticket-list {
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background-color: white;
+
+  @include single-box-shadow(#000000, -5px, 0px, 35px, 5px);
+
+  @include single-transition(left, .5s);
+
+  padding: rem-calc(15px);
+
+  padding-bottom: 0px;
+}
+
+#ticket-navigation-ticket-list.pulled-aside {
+  left: $ticket-navigation-options-width;
+}

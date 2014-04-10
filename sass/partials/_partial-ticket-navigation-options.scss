@@ -1,0 +1,80 @@
+@import "settings";
+// use rem-calc from foundation
+
+#ticket-navigation-options-loader-container {
+  width: 100%;
+  // flow determined height
+
+  padding-top: rem-calc(25px);
+  color: $grey-text-color-dark-bg;
+}
+
+#ticket-list-edit-filters-form-filter-name-container {
+  margin-bottom: rem-calc(20px);
+}
+
+#ticket-list-edit-filters-form-filter-constraint-container {
+  margin-bottom: rem-calc(20px);
+}
+
+#ticket-list-edit-filters-form-delete-filter {
+  @include inline-block;
+
+  width: 100%;
+  // flow determined height
+
+  padding: rem-calc(25px);
+
+  font-size: 120%;
+}
+
+#ticket-list-edit-filters-add-filter {
+  @include inline-block;
+
+  width: 100%;
+  // flow determined height
+
+  padding-bottom: rem-calc(15px);
+
+  font-size: 120%;
+}
+
+.ticket-list-filter-constraint-indicator {
+  width: rem-calc(10px);
+  font-size: 70%;
+  margin-right: 8px;
+}
+
+.ticket-list-filter-constraint-field-container {
+  padding-left: rem-calc(20px);
+  margin-top: rem-calc(15px);
+}
+
+.ticket-list-filter-constraint-field-value-container {
+  padding-left: rem-calc(10px);
+  margin-top: rem-calc(5px);
+  margin-bottom: rem-calc(10px);
+}
+
+.ticket-list-filter-constraint-collection-constraint-command-container {
+  color: $grey-text-color-dark-bg;
+  padding-top: rem-calc(15px);
+  padding-bottom: rem-calc(15px);
+  padding-left: rem-calc(30px);
+}
+
+.ticket-list-filter-constraint-collection-operator-list-container {
+  margin-bottom: rem-calc(10px);
+}
+
+.ticket-list-filter-constraint-field-list,
+.ticket-list-filter-constraint-operator-list {
+  width: 100%;
+  // flow determined height
+
+}
+
+.ticket-list-filter-constraint-field-list > *,
+.ticket-list-filter-constraint-operator-list > * {
+  vertical-align: middle;
+}

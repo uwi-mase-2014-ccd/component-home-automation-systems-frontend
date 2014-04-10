@@ -1,0 +1,26 @@
+// use rem-calc from foundation
+
+#ticket-comment-form {
+  width: 100%;
+  // flow determined height
+
+  margin-bottom: rem-calc(25px);
+
+}
+
+#ticket-comment-list {
+  width: 100%;
+  // flow determined height
+
+  max-height: rem-calc(450px);
+
+  overflow-y: auto;
+}
+
+.ticket-comment-list-item {
+  width: 100%;
+  // flow determined height
+
+  min-height: rem-calc(96px);
+
+}

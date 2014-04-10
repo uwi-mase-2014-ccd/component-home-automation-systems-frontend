@@ -1,0 +1,34 @@
+
+// use $medium-up from foundation
+
+.ah-small-list-col-1,
+.ah-small-list-col-2,
+.ah-small-list-col-3,
+.ah-medium-list-col-2,
+.ah-medium-list-col-3 {
+  display: block;
+
+  margin: 0;
+  float: left;
+}
+
+.ah-small-list-col-1 {
+  width: 100%;
+}
+
+.ah-small-list-col-2 {
+  width: 50%;
+}
+
+.ah-small-list-col-3 {
+  width: 33.333333%;
+}
+
+@media #{$medium-up}  {
+  .ah-medium-list-col-2 {
+    width: 50%;
+  }
+  .ah-medium-list-col-3 {
+    width: 33.333333%;
+  }
+}

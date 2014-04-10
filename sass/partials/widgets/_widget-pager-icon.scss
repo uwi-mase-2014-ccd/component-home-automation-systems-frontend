@@ -1,0 +1,27 @@
+@import "compass";
+
+// use $alert-color from foundation
+
+.ah-pager-icon {
+  @include inline-block;
+  color: #5C5C5C;
+
+  font-size: 170%;
+
+  margin-left: rem-calc(10px);
+  margin-right: rem-calc(10px);
+
+  @include single-transition(color, .5s);
+}
+
+.ah-pager-icon:hover {
+  color: #CCCCCC;
+}
+
+.ah-pager-icon.ah-alert-color {
+  color: #5C5C5C;
+}
+
+.ah-pager-icon.ah-alert-color:hover {
+  color: $alert-color;
+}

@@ -1,0 +1,94 @@
+/*
+ * AH Toast
+ * Creates an android-like toast message
+ * Based on https://github.com/jirikavi/AngularJS-Toaster
+ */
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "vendor/animate.css/animations";
+
+$toastOpacity: 1;
+$toastHeight: 40px;
+$toastPadding: 10px;
+$toastMargin: 5px;
+
+.ah-toast-container {
+  position: fixed;
+  bottom: 20px;
+
+  width: 100%;
+  z-index: 999999;
+
+  > .ah-toast {
+    color: #ffffff;
+
+    //@include opacity($toastOpacity);
+    height: $toastHeight;
+    padding: $toastPadding;
+    margin: $toastMargin;
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #030303;
+
+    @include border-radius(5px);
+    @include box-shadow();
+
+    > .ah-toast-title {
+      font-weight: 350;
+    }
+  }
+  > .ah-toast.ah-toast-success {
+    background-color: #51a351;
+  }
+  > .ah-toast.ah-toast-error {
+    background-color: #bd362f;
+  }
+  > .ah-toast.ah-toast-info {
+    background-color: #2f96b4;
+  }
+  > .ah-toast.warning {
+    background-color: #f89406;
+  }
+}
+
+/*Responsive Design*/
+@media all and (max-width: 240px) {
+  .ah-toast-container > .ah-toast {
+    padding: 8px 8px 8px 50px;
+    width: 108px;
+  }
+}
+
+@media all and (min-width: 241px) and (max-width: 320px) {
+  .ah-toast-container > .ah-toast {
+    padding: 8px 8px 8px 50px;
+    width: 128px;
+  }
+}
+
+@media all and (min-width: 321px) and (max-width: 480px) {
+  .ah-toast-container > .ah-toast {
+    padding: 8px 8px 8px 50px;
+    width: 192px;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  .ah-toast-container > .ah-toast {
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+  }
+}
+
+.ah-toast.ng-enter {
+  @extend .fadeInUp;
+}
+
+.ah-toast.ng-leave {
+  @extend .fadeOutDown;
+}

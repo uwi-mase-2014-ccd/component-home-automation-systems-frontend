@@ -1,0 +1,93 @@
+<div class="row ah-fill-parent-height">
+    <div class="columns ah-fill-parent-height"
+         ng-class="{ 'small-12': $state.is('devices'), 'small-4': !$state.is('devices') }">
+        <div id="asset-record-list-inner-container"
+             ng-controller="DeviceListController">
+            <div id="asset-record-list-header-container">
+                <h1 class="ah-segment-header-title">
+                    <span>Installed Devices</span>
+                </h1>
+            </div>
+            <hr id="asset-record-list-divider"
+                class="ah-segment-header-divider"/>
+
+            <div id="asset-record-list-listing">
+
+                <div ng-show="recordLoader.isLoading()"
+                     class="ah-ng-hide-fade-in">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span>Loading Devices</span>
+                </div>
+
+                <div ng-show="recordLoader.isFailed()"
+                     class="ah-ng-hide-fade-in ng-hide">
+                    <i class="fa fa-cogs"></i>
+                    <span>Failed To Load Devices</span>
+                </div>
+
+                <div ng-show="recordLoader.isSucceed()"
+                     class="ah-ng-hide-fade-in-down ng-hide">
+                    <div ng-show="records.length == 0"
+                         id="asset-record-list-no-records-label"
+                         class="ah-ng-hide-fade-in ng-hide">
+                        <span>There are no devices.</span>
+                    </div>
+                    <ul ng-if="records.length > 0" class="no-bullet">
+                        <li ng-repeat="record in records track by record.id">
+                            <a ui-sref="devices.detail({ id: record.id })"
+                               class="asset-record-list-item"
+                               ng-class="{ active: $stateParams.id == record.id || currentRootAsset.id == record.id }">
+                                <div class="clearfix">
+                                    <div class="left">
+                                        <span ng-bind="record.name"></span>
+                                    </div>
+                                    <div class="right">
+                                <span class="label success"
+                                      ng-bind="record.id"></span>
+                                    </div>
+                                    <div class="right">
+                                        <span class="label neutral">Device</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="asset-record-list-footer" class="ah-segment-footer">
+                <div ng-show="recordLoader.isSucceed()"
+                     class="ah-ng-hide-fade-in-down">
+                    <span ng-bind="totalRecords"></span>
+                    <span> Devices,</span>
+                    <span>Page </span>
+                    <span ng-bind="currentPage + 1"></span>
+                    <span> of </span>
+                    <span ng-bind="totalPages"></span>
+
+                    <a ng-click="loadPrevPage()" class="ah-pager-icon">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </a>
+                    <a ng-click="loadNextPage()" class="ah-pager-icon">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </a>
+                </div>
+
+                <div ng-show="recordLoader.isLoading()"
+                     class="ah-ng-hide-fade-in ng-hide">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span>Loading Page</span>
+                    <span ng-bind="loadingPage + 1"
+                          style="font-weight: bold"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns ah-fill-parent-height ah-vertical-scroll"
+         ng-class="{ 'small-12': $state.is('devices'), 'small-8': !$state.is('devices') }">
+        <div class="ah-fill-parent-height" ui-view>
+            <div class="ah-fill-parent">
+                <h1 style="margin-top: 100px;" class="subheader text-center">Please select a device.</h1>
+            </div>
+        </div>
+    </div>
+</div>

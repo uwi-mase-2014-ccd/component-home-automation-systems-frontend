@@ -1,0 +1,45 @@
+<div id="page-login-container" ng-controller="LoginFormController">
+
+    <form method="post" ng-submit="login()">
+        <div class="row">
+            <div class="medium-5 medium-centered large-3 columns">
+                <h1 class="subheader text-center">Login</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="medium-5 medium-centered large-3 columns">
+                <label>Username</label>
+                <input ng-model="user.username" type="text" placeholder="Username"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="medium-5 medium-centered large-3 columns">
+                <label>Password:</label>
+                <input ng-model="user.password" type="password" placeholder="Password"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="medium-5 medium-centered large-3 columns text-center">
+                <button class="primary" type="submit" ng-click="login()">
+                    <i class="fa"
+                       ng-class="{'fa-refresh fa-spin': loginRequestLoader.isLoading(), 'fa-sign-in': loginRequestLoader.isComplete()}"></i>
+                    <span>Submit</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="medium-5 medium-centered large-3 columns text-center">
+                <div ng-show="loginError" class="ah-ng-hide-fade-in-down">
+                    <h3 class="subheader">
+                        <small class="ah-alert-color"
+                               ng-bind="loginError"></small>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

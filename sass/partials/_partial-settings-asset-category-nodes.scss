@@ -1,0 +1,95 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+
+#settings-category-container {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+#settings-category-node-table {
+  position: absolute;
+
+  width: 100%;
+
+  top: rem-calc(100px);
+  left: 0;
+  bottom: 0;
+}
+
+#settings-category-node-table-content {
+  position: absolute;
+
+  width: 100%;
+
+  left: 0;
+  top: rem-calc(40px);
+  bottom: 0;
+
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.settings-category-node {
+  width: 100%;
+  // flow determined height
+
+  padding: rem-calc(5px);
+}
+
+.settings-category-node-action-separator {
+  font-size: rem-calc(20px);
+
+  margin-top: rem-calc(4px);
+  margin-left: rem-calc(5px);
+  margin-right: rem-calc(5px);
+
+  color: $grey-text-color-light;
+}
+
+.settings-category-node-action-button {
+  @include inline-block;
+
+  font-size: rem-calc(32px);
+
+  margin-left: rem-calc(5px);
+  margin-right: rem-calc(5px);
+  margin-top: rem-calc(5px);
+}
+
+@media #{$small-only} {
+  .settings-category-node-action-button {
+    font-size: rem-calc(25px);
+  }
+}
+
+.settings-category-node-link {
+  @include inline-block;
+
+  width: 100%;
+  padding: rem-calc(10px);
+
+
+}
+
+.settings-category-node-row {
+  @include transition-property(background-color);
+  @include transition-duration(0.5s);
+
+  background-color: #ffffff;
+}
+
+.settings-category-node-row:hover {
+  background-color: lighten($grey-text-color, 50%);
+}
+
+.settings-category-node-indicator {
+  @include inline-block;
+
+  margin-right: rem-calc(10px);
+  color: $grey-text-color;
+}

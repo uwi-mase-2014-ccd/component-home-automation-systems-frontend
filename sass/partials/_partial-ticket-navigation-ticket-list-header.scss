@@ -1,0 +1,36 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+
+#ticket-list-header-reference-container {
+  position: relative;
+}
+
+#ticket-list-header-ad-ticket-link {
+  @include inline-block;
+  font-size: rem-calc(32px);
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+}
+
+#ticket-list-header-options-link {
+  font-size: rem-calc(32px);
+}
+
+#ticket-list-omi-search-container {
+  @include inline-block;
+
+  position: absolute;
+
+  left: rem-calc(30px);
+  right: rem-calc(40px);
+  top: 0;
+
+  // flow determined height
+
+  padding-left: rem-calc(15px);
+}

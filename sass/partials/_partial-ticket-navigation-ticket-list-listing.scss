@@ -1,0 +1,57 @@
+@import "settings";
+@import "compass";
+
+.ticket-list-ticket-separator {
+  margin: 0;
+  border-color: $grey-line-color;
+}
+
+.ticket-list-ticket-link {
+
+  display: block;
+  padding: {
+    top: rem-calc(5px);
+    right: rem-calc(15px);
+    bottom: rem-calc(5px);
+    left: rem-calc(15px);
+  }
+  background-color: white;
+  @include link-colors(#7a7a7a, #7a7a7a, #7a7a7a, #7a7a7a, #7a7a7a);
+  @include single-transition(background-color, .5s);
+}
+
+@media #{$small-only} {
+
+  .ticket-list-ticket-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ticket-list-ticket-link:hover,
+.ticket-list-ticket-link.active {
+  background-color: #f5f5f5;
+}
+
+.ticket-list-ticket-title {
+  @extend .ah-single-line;
+  font-size: 120%;
+}
+
+.ticket-list-ticket-author {
+  @extend .ah-single-line;
+  font-size: 100%;
+}
+
+.ticket-list-ticket-details {
+  font-size: 100%;
+}
+
+.ticket-list-ticket-category {
+  font-weight: bold;
+}
+
+#ticket-list-listing-no-tickets-label {
+  padding-top: rem-calc(25px);
+  color: $grey-text-color;
+}

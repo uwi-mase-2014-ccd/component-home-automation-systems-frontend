@@ -1,0 +1,9 @@
+@import "settings";
+@import "compass";
+
+#asset-add-asset-container {
+  width: 100%;
+  height: 100%;
+
+  max-width: rem-calc(800px);
+}

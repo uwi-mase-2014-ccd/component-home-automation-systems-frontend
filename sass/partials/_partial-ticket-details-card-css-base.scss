@@ -1,0 +1,21 @@
+@import "compass";
+
+// use $small-only, rem-calc from foundation
+
+.ticket-card-container {
+  width: 100%;
+  // flow determined height
+
+  margin-bottom: rem-calc(35px);
+  padding: rem-calc(25px);
+
+  background-color: white;
+
+  @include single-box-shadow(#9d9d9d);
+}
+
+@media #{$small-only} {
+  .ticket-card-container {
+    padding: rem-calc(15px);
+  }
+}

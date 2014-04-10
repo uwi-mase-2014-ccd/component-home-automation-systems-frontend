@@ -1,0 +1,76 @@
+@import "settings";
+@import "compass";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #eeeeee;
+}
+
+#page-container {
+  //min-height: 100%;
+
+  height: 100%;
+  position: relative;
+
+  background-color: white;
+}
+
+#page-top-bar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  //height: rem-calc(65px);
+
+  z-index: 5;
+
+  background-color: $application-color;
+  @include single-box-shadow;
+}
+
+#page-main-content {
+
+  position: fixed;
+  top: 45px;
+  left: 0;
+  bottom: 40px;
+
+  width: 100%;
+
+  z-index: 1;
+
+  background-color: white;
+  padding-top: rem-calc(50px);
+  padding-left: rem-calc(15px);
+  padding-right: rem-calc(15px);
+}
+
+#page-footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  //height: rem-calc(40px);
+
+  min-height: rem-calc(40px);
+
+  padding-top: rem-calc(5px);
+  padding-bottom: rem-calc(5px);
+  z-index: 5;
+
+  color: $grey-text-color;
+
+  border-top-color: lighten($grey-text-color, 20%);
+  border-top-width: 1px;
+
+  background-color: white;
+
+  font-size: 85%;
+}

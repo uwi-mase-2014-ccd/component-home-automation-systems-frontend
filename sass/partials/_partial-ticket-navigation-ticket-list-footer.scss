@@ -1,0 +1,15 @@
+// use rem-calc from foundation
+
+#ticket-list-footer-pagination-container {
+  padding-right: rem-calc(15px);
+}
+
+#ticket-list-footer-loading-container {
+  display: inline;
+
+}
+
+#ticket-list-footer-pagination-control-container {
+  display: inline;
+  font-size: 120%;
+}

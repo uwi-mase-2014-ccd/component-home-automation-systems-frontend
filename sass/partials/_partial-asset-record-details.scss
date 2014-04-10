@@ -1,0 +1,39 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+
+.reservation-form-add-client-link-container {
+  width: 100%;
+  height: 100%;
+
+  padding-top: rem-calc(20px);
+}
+.reservation-form-add-client-link {
+  font-size: 250%;
+}
+
+.asset-detail-reservation-action-button {
+  font-size: 160%;
+  margin-right: rem-calc(15px);
+  vertical-align: middle;
+}
+
+.asset-detail-asset-child-link {
+  @include inline-block;
+
+  // flow determined width
+  // flow determined height
+
+  padding: rem-calc(5px);
+
+  margin: rem-calc(5px);
+}
+
+.asset-reservation-filter-container {
+  margin-top: rem-calc(20px);
+}
+
+.asset-log-filter-container {
+  margin-bottom: rem-calc(20px);
+}

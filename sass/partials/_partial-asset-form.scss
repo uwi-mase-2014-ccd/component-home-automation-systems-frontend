@@ -1,0 +1,65 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc from foundation
+.asset-form-record-tag {
+  margin-left: rem-calc(10px);
+  margin-bottom: rem-calc(10px);
+}
+
+#asset-form-save-tag-link {
+  font-size: 250%;
+  @include link-colors($grey-text-color, $success-color, $success-color, $grey-text-color, $success-color);
+}
+
+#asset-form-show-categories-link {
+  font-size: 250%;
+  @include link-colors($grey-text-color, $anchor-font-color, $anchor-font-color, $grey-text-color, $anchor-font-color);
+}
+
+#asset-form-published-flag-false-link,
+#asset-form-published-flag-true-link {
+  @include inline-block;
+
+  margin-top: rem-calc(10px);
+  margin-left: rem-calc(10px);
+}
+
+#asset-form-published-flag-true-link {
+  @include link-colors($grey-text-color, $success-color, $success-color, $grey-text-color, $success-color);
+
+}
+
+#asset-form-published-flag-true-link.active {
+  @include link-colors($success-color, $success-color, $success-color, $success-color, $success-color);
+
+}
+
+
+#asset-form-published-flag-false-link {
+  @include link-colors($grey-text-color, $alert-color, $alert-color, $grey-text-color, $alert-color);
+
+}
+
+#asset-form-published-flag-false-link.active {
+  @include link-colors($alert-color, $alert-color, $alert-color, $alert-color, $alert-color);
+
+}
+
+.asset-form-remove-field-button {
+  margin-left: rem-calc(15px);
+}
+
+.asset-form-field-link {
+  @include inline-block;
+
+  margin: rem-calc(10px)
+}
+
+.asset-form-parent-container {
+  margin-bottom: rem-calc(40px);
+}
+
+.asset-form-parent-list-separator {
+  margin-left: rem-calc(10px);
+}

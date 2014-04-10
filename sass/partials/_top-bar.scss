@@ -1,0 +1,93 @@
+@import "settings";
+// use rem-calc and $small-only from foundation
+
+#page-logo-link {
+  padding: {
+    left: rem-calc(25px);
+    top: rem-calc(13px);
+    bottom: rem-calc(10px);
+  }
+
+  display: block;
+  font-size: rem-calc(24px);
+  font-weight: 100;
+  @include link-colors($application-complement-color, $application-complement-color, $application-complement-color, $application-complement-color, $application-complement-color);
+
+}
+
+@media #{$small-only} {
+
+  #page-logo-link {
+    padding-left: 0;
+  }
+}
+
+#page-top-bar-nav-menu {
+  @include inline-block;
+  padding: {
+    right: rem-calc(25px);
+  }
+
+  height: rem-calc(52px);
+}
+
+@media #{$small-only} {
+
+  #page-top-bar-nav-menu {
+    padding: {
+      right: 0;
+    }
+  }
+}
+
+.page-top-bar-nav-menu-item {
+
+  @include inline-block;
+  height: 100%;
+
+}
+
+@media #{$small-only} {
+  .page-top-bar-nav-menu-item {
+    margin-left: 0 !important;
+  }
+}
+
+.page-top-bar-nav-menu-item-link {
+  @include inline-block;
+
+  // flow determined width
+  // flow determined height
+
+  line-height: rem-calc(22px);
+
+  font-weight: 100;
+
+  padding: rem-calc(15px);
+  @include single-transition(background-color, .5s);
+
+  @include link-colors($application-complement-color, $application-complement-color, $application-complement-color, $application-complement-color, $application-complement-color);
+}
+
+.page-top-bar-nav-menu-item-link:hover, .page-top-bar-nav-menu-item-link.active {
+  background-color: #eeeeee;
+}
+
+#page-top-bar-alt-login-button-container {
+  padding-top: rem-calc(25px);
+}
+
+.page-top-bar-login-form-field-container {
+  margin-top: rem-calc(6px);
+}
+
+.page-top-bar-login-form-button-container {
+  margin-top: rem-calc(3px);
+}
+
+@media #{$small-only} {
+  .page-top-bar-login-form-button-container {
+    margin-top: rem-calc(15px);
+    margin-bottom: rem-calc(15px);
+  }
+}

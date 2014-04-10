@@ -1,0 +1,150 @@
+@import "settings";
+@import "compass";
+
+//TODO Needs some tidying up
+// Refactor component to primary header (i.e. light) and secondary (i.e. Dark)
+// use rem-calc from foundation
+
+// use $primary-color from foundation
+// use $warning-color from foundation
+// use $success-color from foundation
+
+.ah-segment-header-container {
+  position: relative;
+
+  color: $grey-text-color;
+  @extend .clearfix;
+}
+
+.ah-segment-header-icon {
+  @extend .icon-link;
+
+  @include inline-block;
+
+  // flow determined width
+  // flow determined height
+
+  font-size: 230%;
+  vertical-align: middle;
+
+  padding: rem-calc(10px);
+}
+
+.ah-segment-header-separator {
+
+  @include inline-block;
+
+  // flow determined width
+  // flow determined height
+
+  color: $grey-line-color;
+  vertical-align: middle;
+  font-size: 200%;
+  font-weight: 100;
+}
+
+.ah-segment-header-divider {
+
+  @include inline-block;
+
+  width: 100%;
+  // flow determined height
+
+  color: $grey-line-color;
+  vertical-align: middle;
+
+}
+
+.ah-segment-header-title {
+
+  @include inline-block;
+
+  // flow determined width
+  // flow determined height
+
+  font-size: 140%;
+  color: $grey-text-color;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ah-segment-header-title.left,
+.ah-segment-header-title.right {
+  margin-top: rem-calc(30px);
+}
+
+.ah-segment-list-item-link {
+  @include inline-block;
+
+  width: 100%;
+  // flow determined height
+
+  padding: rem-calc(5px);
+  padding-bottom: rem-calc(10px);
+
+  background-color: white;
+  @include link-colors(#7a7a7a, #7a7a7a, #7a7a7a, #7a7a7a, #7a7a7a);
+  @include single-transition(background-color, .5s);
+}
+
+@media #{$small-only} {
+
+  .ah-segment-list-item-link {
+    padding-left: rem-calc(5px);
+    padding-right: rem-calc(5px);
+  }
+}
+
+.ah-segment-list-item-link:hover,
+.ah-segment-list-item-link.active {
+  background-color: #f5f5f5;
+}
+
+.ah-segment-footer {
+  font-size: 80%;
+  color: $grey-text-color;
+  background-color: white;
+}
+
+.ah-dark-segment-header-title {
+  color: $grey-text-color-dark-bg;
+  text-transform: uppercase;
+  font-size: 120%;
+
+  margin-top: rem-calc(10px);
+}
+
+.ah-dark-segment-header-title.left,
+.ah-dark-segment-header-title.right {
+  margin-top: rem-calc(15px);
+}
+
+
+.ah-dark-segment-header-divider {
+  margin-top: 0px;
+  color: $grey-text-color-dark-bg;
+}
+
+
+.ah-dark-segment-list-item-link {
+  display: block;
+
+  width: 100%;
+  // flow determined height
+
+  padding-top: rem-calc(5px);
+  padding-bottom: rem-calc(5px);
+  margin-bottom: rem-calc(10px);
+
+  padding-right: rem-calc(5px);
+
+  @include link-colors($grey-text-color-dark-bg, $warning-color, $warning-color, $grey-text-color-dark-bg, $warning-color);
+
+  @include single-transition(color, .3s);
+}
+
+.ah-dark-segment-list-item-link.active {
+  color: $success-color;
+}
+

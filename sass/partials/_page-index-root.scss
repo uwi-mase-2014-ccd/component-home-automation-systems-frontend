@@ -1,0 +1,28 @@
+
+// use rem-calc from foundation
+// use $small-only from foundation
+
+#page-index-container {
+  width: 100%;
+  height: 100%;
+
+  padding-top: rem-calc(60px);
+
+  overflow: auto;
+
+}
+
+@media #{$small-only} {
+  #page-index-container {
+    padding-left: rem-calc(5px);
+    padding-right: rem-calc(5px);
+  }
+}
+
+#page-index-header {
+  margin-bottom: rem-calc(35px);
+}
+
+#page-index-search-box-container {
+  margin-bottom: rem-calc(75px);
+}

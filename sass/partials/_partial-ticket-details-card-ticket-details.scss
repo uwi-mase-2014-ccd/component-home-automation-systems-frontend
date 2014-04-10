@@ -1,0 +1,49 @@
+@import "settings";
+
+// use rem-calc from foundation
+
+.ticket-card-ticket-owner {
+  font-size: 120%;
+  color: $grey-text-color;
+}
+
+.ticket-card-ticket-category-container {
+  width: 100%;
+  // flow determined height
+
+  margin-top: rem-calc(25px);
+  margin-bottom: rem-calc(5px);
+
+  font-size: 120%;
+  color: $grey-text-color;
+}
+
+.ticket-card-ticket-tags-container {
+  width: 100%;
+  // flow determined height
+
+  margin-bottom: rem-calc(5px);
+}
+
+.ticket-card-ticket-tag {
+  margin-left: rem-calc(10px);
+  margin-bottom: rem-calc(10px);
+}
+
+.ticket-card-ticket-assigned {
+  width: 100%;
+  // flow determined height
+  margin-bottom: rem-calc(20px);
+
+  font-size: 50%;
+  color: $grey-text-color;
+}
+
+.ticket-card-ticket-updated-date {
+  width: 100%;
+  // flow determined height
+  margin-bottom: rem-calc(20px);
+
+  font-size: 50%;
+  color: $grey-text-color;
+}

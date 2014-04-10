@@ -1,0 +1,70 @@
+@import "../settings";
+
+// use rem-calc from foundation
+
+.ah-minimal-input-container {
+  position: relative;
+
+  width: 100%;
+  // flow determined height
+
+  padding-left: rem-calc(35px);
+  padding-right: rem-calc(10px);
+
+  overflow: visible;
+}
+
+.ah-minimal-input-field:focus,
+.ah-minimal-input-field {
+
+  width: 100%;
+  // flow determined height
+
+  /* Normalize Input Field To Spartan Base */
+  background-color: transparent;
+  border: 0px solid;
+  outline: 0;
+
+  font-size: rem-calc(18px);
+  font-weight: 200;
+
+  padding-bottom: rem-calc(5px);
+}
+
+.ah-minimal-input-icon {
+  position: absolute;
+
+  top: rem-calc(5px);
+  left: rem-calc(10px);
+
+  // flow determined width
+  // flow determined height
+
+  color: $grey-text-color;
+}
+.ah-minimal-input-border {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: rem-calc(5px);
+
+  border: solid 1px $grey-line-color;
+  border-top: none;
+
+}
+
+.ah-minimal-input-border.dark-bg {
+  border: solid 1px $grey-line-color-dark-bg;
+  border-top: none;
+}
+
+.ah-minimal-input-icon.dark-bg {
+  color: $grey-text-color-dark-bg;
+}
+
+.ah-minimal-input-field.dark-bg {
+  color: $grey-text-color-dark-bg;
+}

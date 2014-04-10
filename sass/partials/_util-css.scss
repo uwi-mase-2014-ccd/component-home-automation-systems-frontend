@@ -1,0 +1,201 @@
+@import "settings";
+@import "compass";
+
+// use rem-calc and $anchor-font-color and $small-only and label-style and $warning-color and $alert-color and $success-color from foundation
+
+$neutral-color: #008CBA;
+
+.ng-hide {
+  display: none;
+}
+
+.ah-invisible {
+  visibility: hidden;
+}
+
+p.old-english:first-letter {
+  float: left;
+  font-size: 56px;
+  line-height: 56px;
+  padding: 0 10px 0 0;
+  display: block;
+}
+
+@media #{$small-only} {
+  .small-text-center {
+    text-align: center !important;
+  }
+}
+
+@media #{$small-only} {
+  .small-text-left {
+    text-align: left !important;
+  }
+}
+
+.ah-clear-bottom-space, .ah-clear-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+.ah-clear-bottom-space, .ah-clear-bottom-padding {
+  padding-bottom: 0 !important;
+}
+
+.ah-single-line {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ah-fill-parent-height {
+  height: 100%;
+}
+
+.ah-fill-parent-width {
+  width: 100%;
+}
+
+.ah-fill-parent {
+  @extend .ah-fill-parent-height;
+  @extend .ah-fill-parent-width;
+}
+
+.ah-form-bounded-container {
+  max-width: rem-calc(600px);
+}
+
+.ah-form-action-button {
+  font-size: 250%;
+}
+
+.ah-vertical-scroll {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.ah-horizontal-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.ah-inline-block {
+  @include inline-block;
+}
+
+.ah-inline {
+  display: inline;
+}
+
+// Additional Label
+.label.neutral {
+  @include label-style($neutral-color);
+}
+
+.label.warning {
+  @include label-style($warning-color);
+}
+
+.ah-warning-color {
+  color: $warning-color;
+}
+
+.ah-alert-color {
+  color: $alert-color;
+}
+
+.ah-success-color {
+  color: $success-color;
+}
+
+.ah-neutral-color {
+  color: $neutral-color;
+}
+
+a.icon-link {
+  @include link-colors(inherit, $anchor-font-color, $anchor-font-color, inherit, $anchor-font-color);
+
+  @include single-transition(color, .3s);
+}
+
+a.icon-link.ah-warning-color {
+  @include link-colors(inherit, $warning-color, $warning-color, inherit, $warning-color);
+}
+
+a.icon-link.ah-warning-color.active {
+  @include link-colors($warning-color, $warning-color, $warning-color, $warning-color, $warning-color);
+}
+
+a.icon-link.ah-alert-color {
+  @include link-colors(inherit, $alert-color, $alert-color, inherit, $alert-color);
+}
+
+a.icon-link.ah-alert-color.active {
+  @include link-colors($alert-color, $alert-color, $alert-color, $alert-color, $alert-color);
+}
+
+a.icon-link.ah-success-color {
+  @include link-colors(inherit, $success-color, $success-color, inherit, $success-color);
+}
+
+a.icon-link.ah-success-color.active {
+  @include link-colors($success-color, $success-color, $success-color, $success-color, $success-color);
+}
+
+a.icon-link.ah-neutral-color {
+  @include link-colors(inherit, $neutral-color, $neutral-color, inherit, $neutral-color);
+}
+
+a.icon-link.ah-neutral-color.active {
+  @include link-colors($neutral-color, $neutral-color, $neutral-color, $neutral-color, $neutral-color);
+}
+
+a.ah-warning-color {
+  @include link-colors($warning-color, $warning-color, $warning-color, $warning-color, $warning-color);
+}
+
+a.ah-alert-color {
+  @include link-colors($alert-color, $alert-color, $alert-color, $alert-color, $alert-color);
+}
+
+a.ah-success-color {
+  @include link-colors($success-color, $success-color, $success-color, $success-color, $success-color);
+}
+
+a.ah-neutral-color {
+  @include link-colors($neutral-color, $neutral-color, $neutral-color, $neutral-color, $neutral-color);
+}
+
+.ah-grey-color {
+  color: $grey-text-color;
+}
+
+.ah-grey-color-dark-bg {
+  color: $grey-text-color-dark-bg;
+}
+
+.f-dropdown > li.active {
+  background: #eeeeee;
+}
+
+.ah-small {
+  @extend small;
+}
+
+.ah-uppercase {
+  text-transform: uppercase;
+}
+.ah-normal-case {
+  text-transform: none;
+}
+
+.ah-font-thin {
+  font-weight: $subheader-font-weight;
+}
+
+.ah-right-space {
+  margin-right: rem-calc(10px);
+}
+
+.ah-bottom-space {
+  margin-bottom: rem-calc(10px);
+}

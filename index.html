@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Project HAS</title>
+    <link href="./css/screen.css" media="screen, projection" rel="stylesheet"
+          type="text/css"/>
+</head>
+<body ng-controller="ManageDevicesController">
+<div id="page-container">
+    <div id="page-top-bar">
+        <div class="row">
+            <div class="small-8 medium-5 columns text-left">
+                <a id="page-logo-link"
+                   ng-click="goHome()">
+                    <i class="fa fa-leaf"></i>
+                    <span>Project HAS</span>
+                </a>
+            </div>
+            <div class="small-4 medium-7 columns text-right">
+                <ul id="page-top-bar-nav-menu"
+                    class="inline-list ah-clear-bottom-space">
+
+                    <li class="page-top-bar-nav-menu-item"
+                        ng-class="{ 'show-for-medium-up': $state.includes('devices') }">
+                        <div>
+                            <a class="page-top-bar-nav-menu-item-link"
+                               ui-sref="devices"
+                               ng-class="{ active: $state.includes('devices') }">
+                                <i class="fa fa-archive"></i>
+                                <span class="show-for-medium-up">Devices</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li ng-show="isLoggedIn()" class="page-top-bar-nav-menu-item">
+                        <a class="page-top-bar-nav-menu-item-link"
+                           ng-click="logout()">
+                            <div class="ah-inline-block">
+                                <i class="fa fa-sign-out"></i>
+                                <span class="show-for-medium-up"
+                                      ng-bind="user.username"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-main-content">
+        <div class="ah-fill-parent-height" ui-view></div>
+    </div>
+
+
+    <div id="page-footer-container">
+        <div class="row">
+            <div class="small-12 columns">
+                <span>Smart Home Industries &copy; 2014</span>
+                <span> | All Rights Reserved</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var GLOBAL_ROUTES;
+    GLOBAL_ROUTES = {};
+</script>
+<div ah-toast-container></div>
+
+<script type="text/javascript" src="./js/vendor/trunk/require.js"
+        data-main="./js/app-manage-assets.js"></script>
+</body>
+</html>

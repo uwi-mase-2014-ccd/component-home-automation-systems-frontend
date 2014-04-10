@@ -1,0 +1,46 @@
+@import "../vendor/animate.css/animations";
+
+@import "compass";
+
+.ah-ng-hide-fade-in.ng-hide-remove {
+  display: block !important;
+}
+
+
+.ah-ng-hide-fade-in {
+  @include transition-duration(0.5s);
+  @include transition-property(opacity);
+}
+
+.ah-ng-hide-fade-in.ng-hide {
+  @include opacity(0);
+}
+
+.ah-ng-hide-fade-in-down {
+  @extend .animated;
+}
+.ah-ng-hide-fade-in-down.ng-hide-remove {
+  @extend .fadeInDown;
+}
+
+.ah-ng-hide-grow.ng-hide-add,
+.ah-ng-hide-grow.ng-hide-remove{
+  display: block !important;
+}
+
+.ah-ng-hide-grow {
+  height: 100%;
+  overflow: auto;
+  @include transition-duration(0.5s);
+  @include transition-property(height);
+}
+
+.ah-ng-hide-grow.ng-hide {
+  height: 0%;
+}
+
+.ah-animate-height {
+  overflow: auto;
+  @include transition-duration(0.5s);
+  @include transition-property(height);
+}

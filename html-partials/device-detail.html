@@ -1,0 +1,62 @@
+<div ng-controller="ViewDeviceController">
+    <div ng-show="assetLoader.isLoading()" class="ah-ng-hide-fade-in ng-hide">
+        <i class="fa fa-refresh fa-spin"></i>
+        <span>Loading Record</span>
+    </div>
+
+    <div ng-show="assetLoader.isFailed()" class="ah-ng-hide-fade-in ng-hide">
+        <i class="fa fa-cogs"></i>
+        <span>Failed To Load Record</span>
+    </div>
+
+    <div ng-show="assetLoader.isSucceed()"
+         class="ah-ng-hide-fade-in-down ng-hide">
+        <div class="ah-segment-header-container">
+            <div>
+                <h1 class="left ah-segment-header-title">Device</h1>
+
+                <!--
+                <a class="right ah-segment-header-icon ah-warning-color"
+                   ng-click="$state.go('devices.edit', {id: asset.id, asset: asset})">
+                    <i class="fa fa-edit"></i>
+                </a>
+                -->
+                <!--
+                <a class="right ah-segment-header-icon ah-alert-color"
+                   ng-click="deleteAsset(asset)">
+                    <i class="fa fa-trash-o"
+                       ng-class="{ 'fa-refresh fa-spin': deleteRequestLoader.isLoading() }"></i>
+                </a>
+                -->
+            </div>
+            <hr class="ah-segment-header-divider"/>
+
+
+            <h2 class="subheader" ng-bind="asset.name"></h2>
+
+            <h3 class="subheader">
+                <small>
+                    <span>Device Number: </span>
+                    <span ng-bind="asset.id"></span>
+                </small>
+            </h3>
+
+            <p ng-bind="asset.description"></p>
+
+            <ul class="no-bullet">
+                <li ng-repeat="fieldValue in asset.values">
+                    <div class="row">
+                        <div class="small-6 medium-4 columns">
+                            <strong>
+                                <span ng-bind="fieldValue.title"></span>
+                            </strong>
+                        </div>
+                        <div class="small-6 medium-8 columns">
+                            <span ng-bind="fieldValue.value"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+// use rem-calc from foundation
+
+.ah-calendar-date-day {
+  font-size: 200%;
+  padding-bottom: rem-calc(5px);
+}
+
+.ah-calendar-date-month {
+  font-size: 100%;
+  padding-bottom: rem-calc(5px);
+}
+
+.ah-calendar-date-year {
+  font-size: 70%;
+  padding-bottom: rem-calc(5px);
+}
+
+.ah-calendar-date-time {
+  font-size: 80%;
+  padding-bottom: rem-calc(5px);
+}
