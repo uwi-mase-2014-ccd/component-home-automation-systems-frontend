@@ -164,6 +164,11 @@
               return;
             }
 
+			if (!data.data.success) {
+              cb({ message: 'Invalid credentials.' });
+              return;
+			}
+			
             cb(undefined, {
               users: data.users,
               total: data.total

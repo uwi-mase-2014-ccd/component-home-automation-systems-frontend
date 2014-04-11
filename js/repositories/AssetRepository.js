@@ -37,7 +37,7 @@
             }
 
             cb(undefined, {
-              assets: data
+              assets: data.data.devices
               });
           });
     }
