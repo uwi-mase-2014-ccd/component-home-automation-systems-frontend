@@ -164,7 +164,7 @@
 
                   $scope.setGlobalUser(user);
                   $scope.loginRequestLoader.setComplete();
-                  Toast.success('Welcome ' + user.name);
+                  Toast.success('Welcome');
                 });
               });
         };
