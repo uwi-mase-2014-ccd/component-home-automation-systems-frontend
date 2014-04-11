@@ -63,7 +63,7 @@
             }
 
             cb(undefined, {
-              asset: data
+              asset: data.data.device
               });
           });
     }
