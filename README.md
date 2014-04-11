@@ -29,3 +29,10 @@ This component orchestrates the flow of data through the following components:
 This component does not expose any web services but its user interface is accessible by browsing to the following URL:
 
 	http://cs-proj-srv:8083/
+	
+This component has been deployed to a public server at the endpoint: 
+
+    http://ticketmanager.mysoftware.io:8100/
+
+Note: The UWI Server deployment uses stubs because other dependent services are not yet hosted on the UWI Server
+
