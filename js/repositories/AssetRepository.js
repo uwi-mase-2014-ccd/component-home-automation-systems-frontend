@@ -18,8 +18,8 @@
     var AssetRepository;
 
     function getAssets(query, cb) {
-      APIClient.get(
-          "http://uwi-has.appspot.com/v1/crud/",
+      APIClient.post(
+          "/component-device-management/src/read.php",
           {
             query: {
               categoryId: query.categoryId,
@@ -45,7 +45,7 @@
 
     function getAsset(query, cb) {
       APIClient.get(
-          "http://uwi-has.appspot.com/v1/crud/",
+          "/component-device-management/src/read.php",
           {
             query: {
               id: query.assetId,

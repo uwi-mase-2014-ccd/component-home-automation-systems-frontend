@@ -148,7 +148,7 @@
     function authenticateUser(user, cb) {
     
       APIClient.post(
-          'http://localhost/~reneewhitelocke/login-component-dist2/login.php',
+          '/component-login/src/login.php',
           {
           	data: {
           		username: user.username,
